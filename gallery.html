@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lilly's horror store - Art Gallery</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="gallery-page">
+
+    <header>
+        <div class="header-container">
+            <a href="index.html"><img src="Photos/217920712de6a34d2da69740c822f52b.png" alt="Logo" class="logo"></a>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="gallery.html">Art Gallery</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="pricing.html" class="current">Pricing</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+<div id="nsfw-warning"> <!-- NSFW warning -->
+    <div class="warning-symbol">⚠️</div>
+    <p>NSFW 18+ Only! Press and hold the button for 5 seconds to proceed:</p>
+    <div id="progress-bar-container">
+        <div id="progress-bar"></div>
+        <div id="progress-text">0%</div>
+    </div>
+    <div class="button-container">
+        <button id="nsfw-button">Press and hold</button>
+        <button id="home-button" onclick="goToHomePage()">Back to Home</button>
+    </div>
+</div>
+
+<div class="gallery" style="display: none;"> <!-- Gallery -->
+    <!-- Gallery images -->
+    <div class="image">
+        <img src="Photos/F8XwE2KWwAADN2M.png" alt="Image 1">
+    </div>
+    <div class="image">
+        <img src="Photos/FA6t08JXIAEOxym.png" alt="Image 2">
+    </div>
+    <div class="image">
+        <img src="Photos/FAwu74AXoAUEPAM.png" alt="Image 3">
+    </div>
+    <div class="image">
+        <img src="Photos/FB_wiaRXoAgFBYg.png" alt="Image 4">
+    </div>
+    <div class="image">
+        <img src="Photos/FB88IDiXIAQUAe-.png" alt="Image 5">
+    </div>
+    <div class="image">
+        <img src="Photos/FB-A02xWEAEp1Hf.png" alt="Image 6">
+    </div>
+    <div class="image">
+        <img src="Photos/FBble4nWEAY4SXP.png" alt="Image 7">
+    </div>
+    <div class="image">
+        <img src="Photos/FBfVLBzWYAc42F7.png" alt="Image 8">
+    </div>
+    <div class="image">
+        <img src="Photos/FBluS6LXsAIxg9M.png" alt="Image 9">
+    </div>
+    <div class="image">
+        <img src="Photos/FBrsV1GWQAIv_9S.png" alt="Image 10">
+    </div>
+    <div class="image">
+        <img src="Photos/FeywALeXoAAclaV.jpg" alt="Image 11">
+    </div>
+    <div class="image">
+        <img src="Photos/Ff4PbgGWQAE8WFv.png" alt="Image 12">
+    </div>
+    <div class="image">
+        <img src="Photos/FfaGAvKXkAIMFdJ.png" alt="Image 13">
+    </div>
+    <div class="image">
+        <img src="Photos/FGtnXv8WYAgR9hz.png" alt="Image 14">
+    </div>
+    <div class="image">
+        <img src="Photos/FHJE6S1WQAgDVRJ.png" alt="Image 15">
+    </div>
+    <div class="image">
+        <img src="Photos/FJ7KLeNWUAYMa26.png" alt="Image 16">
+    </div>
+    <div class="image">
+        <img src="Photos/FKkTPYoXEAQLRZv.jpg" alt="Image 17">
+    </div>
+    <div class="image">
+        <img src="Photos/FLEYOuCXsAUOY6N.jpg" alt="Image 18">
+    </div>
+    <div class="image">
+        <img src="Photos/F-lJtwAWwAAd1bc.png" alt="Image 19">
+    </div>
+    <div class="image">
+        <img src="Photos/FLlAdsDXMAIyRaE.png" alt="Image 20">
+    </div>
+    <div class="image">
+        <img src="Photos/FLlaMEzXMAEbUb4.png" alt="Image 21">
+    </div>
+    <div class="image">
+        <img src="Photos/FLlYyRyXIAM-1pv.png" alt="Image 22">
+    </div>
+    <div class="image">
+        <img src="Photos/FLMcVULXIAQ6zFn.png" alt="Image 23">
+    </div>
+    <div class="image">
+        <img src="Photos/FMJd2SQXMAYqV9o.png" alt="Image 24">
+    </div>
+    <div class="image">
+        <img src="Photos/FNVTblvWUAMnjsr.png" alt="Image 25">
+    </div>
+    <div class="image">
+        <img src="Photos/FpcAfl2X0AQiYFi.png" alt="Image 26">
+    </div>
+    <div class="image">
+        <img src="Photos/FpiKY_nXgAEqqEG.png" alt="Image 27">
+    </div>
+    <div class="image">
+        <img src="Photos/FRczcbnXsAESHVD.png" alt="Image 28">
+    </div>
+    <div class="image">
+        <img src="Photos/FSIN5sQXIAEbNfB.png" alt="Image 29">
+    </div>
+    <div class="image">
+        <img src="Photos/FSWRiihWUA0KDbv.jpg" alt="Image 30">
+    </div>
+    <div class="image">
+        <img src="Photos/FTi5XedWIAQvhq8.png" alt="Image 31">
+    </div>
+    <div class="image">
+        <img src="Photos/FTIuW9GUYBwlk5p.png" alt="Image 32">
+    </div>
+    <div class="image">
+        <img src="Photos/FTZ6xIrXoAoghq1.png" alt="Image 33">
+    </div>
+    <div class="image">
+        <img src="Photos/FU3IudUWQAEvnjD.png" alt="Image 34">
+    </div>
+    <!--div class="image">
+        <img src="" alt="Image 35">
+    </div -->
+    <div class="image">
+        <img src="Photos/FUNFylXX0AE6F8-.png" alt="Image 36">
+    </div>
+    <div class="image">
+        <img src="Photos/FV63kY6X0AMR4wA.png" alt="Image 37">
+    </div>
+    <div class="image">
+        <img src="Photos/FVV5dz5WIAAiLLi.png" alt="Image 38">
+    </div>
+    <div class="image">
+        <img src="Photos/GB-5i0DXIAAxB_a.png" alt="Image 39">
+    </div>
+    <div class="image">
+        <img src="Photos/GHnzn4zXsAA2C28.png" alt="Image 40">
+    </div>
+    <div class="image">
+        <img src="Photos/GIv-5_ZW0AAnpJu.jpg" alt="Image 41">
+    </div>
+    <div class="image">
+        <img src="Photos/GL9ohbkXYAAIY7z.png" alt="Image 42">
+    </div>
+    <div class="image">
+        <img src="Photos/GLUJIxlWEAAMSBH.png" alt="Image 43">
+    </div>
+    <div class="image">
+        <img src="Photos/GLZgarUbcAAJ_M1.png" alt="Image 44">
+    </div>
+    <div class="image">
+        <img src="Photos/GOTDZacW0AASWIB.png" alt="Image 45">
+    </div>
+    <div class="image">
+        <img src="Photos/Trans_CJ_Sketch.png" alt="Image 46">
+    </div>
+</div>
+
+
+<!-- Add this overlay to display full-size image -->
+<div id="overlay" class="overlay">
+    <span class="close-btn" onclick="closeOverlay()">&times;</span>
+    <img id="overlay-img" class="overlay-img" src="" alt="Full Size Image">
+</div>
+
+
+<script src="gallery.js"></script>
+
+</body>
+</html>
