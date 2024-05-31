@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
+    <title>Lilly's Horror Store - Home</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="home.css">
     <link rel="icon" href="Photos/217920712de6a34d2da69740c822f52b.png" type="image/x-icon">
     <link rel="apple-touch-icon" href="Photos/217920712de6a34d2da69740c822f52b.png">
 </head>
@@ -19,6 +20,7 @@
                     <li><a href="contact.html">Contact</a></li>
                     <li><a href="pricing.html">Pricing</a></li>
                     <li><a href="terms.html">ToS</a></li>
+                    <li><a href="reviews.html">Reviews</a></li>
                 </ul>
             </nav>
         </div>
@@ -26,24 +28,32 @@
 
     <div class="slideshow-container">
         <div class="mySlides fade">
-            <img src="Photos\Unsssstitled.png" style="width:100%">
+            <img src="Photos/500x500_Trans_CJ.png" style="width:100%">
         </div>
 
         <div class="mySlides fade">
-            <img src="Photos\GOTDZacW0AASWIB.png" style="width:100%">
+            <img src="Photos/GOTDZacW0AASWIB.png" style="width:100%">
         </div>
 
         <div class="mySlides fade">
-            <img src="Photos\GLZgarUbcAAJ_M1.png" style="width:100%">
+            <img src="Photos/500x500_Sppok.png" style="width:100%">
         </div>
 
         <div class="mySlides fade">
-            <img src="Photos\GLUJIxlWEAAMSBH.png" style="width:100%">
+            <img src="Photos/500x500_Alice.png" style="width:100%">
         </div>
 
         <!-- Navigation buttons -->
         <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
         <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+        <!-- Dots for navigation -->
+        <div class="dots">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+            <span class="dot" onclick="currentSlide(4)"></span>
+        </div>
     </div>
 
     <div class="content">
@@ -51,6 +61,39 @@
         <p>Explore amazing artworks in our gallery and contact us for commissions!</p>
     </div>
 
+    <div class="about-section">
+        <h2>About Us</h2>
+        <div class="about-details">
+            <p><strong>Artist:</strong> Lilly</p>
+            <p><strong>Coder:</strong> CJ Eclipse</p>
+        </div>
+        <p>Welcome to our website! We are passionate about bringing creativity to life through art and technology.</p>
+        <p>Lilly, our talented artist, specializes in creating stunning artworks that captivate and inspire. With a keen eye for detail and a love for experimentation, Lilly's creations are as diverse as they are imaginative.</p>
+        <p>CJ Eclipse, our skilled coder, is dedicated to making sure our website runs smoothly and seamlessly. With expertise in web development and a commitment to excellence, CJ ensures that visitors have a pleasant and user-friendly experience.</p>
+        <p>Together, we strive to provide you with a platform to explore, commission, and enjoy beautiful art. Thank you for visiting!</p>
+    </div>
+    
+    
+
+    <div class="blog-post">
+        <h3>First lunch!</h3>
+        <p class="excerpt">Post excerpt goes here...</p>
+        <span class="date">Publication Date</span>
+        <a href="#" class="read-more">Read More</a>
+    </div>
+    <div class="blog-post">
+        <h3>Fan Art + OC TheOutlastTruals</h3>
+        <p class="excerpt">Finally finished a personal project of mine</p>
+        <span class="date">Publication Date: May 23rd of 2024</span>
+        <a href="https://twitter.com/LilysAcLife/status/1793773969172283613" class="read-more">Read More</a>
+    </div>
+    <div class="blog-post">
+        <h3>Post Title</h3>
+        <p class="excerpt">Post excerpt goes here...</p>
+        <span class="date">Publication Date</span>
+        <a href="#" class="read-more">Read More</a>
+    </div>
+    
     <script src="slideshow.js"></script>
 </body>
 </html>

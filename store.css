@@ -14,7 +14,6 @@ header {
     display: flex;
     justify-content: space-between; /* Distribute items evenly along the main axis */
     align-items: center;
-    padding: 0 20px; /* Add padding to adjust spacing */
 }
 
 nav ul {
@@ -64,7 +63,7 @@ nav ul li a:hover {
     display: flex;
     justify-content: space-between;
     padding: 10px;
-    border-bottom: 1px solid #ccc;
+    border-bottom: 1px solid #ffffff;
 }
 
 .cart-total {

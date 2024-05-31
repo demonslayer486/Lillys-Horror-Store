@@ -1,64 +1,68 @@
-document.addEventListener('DOMContentLoaded', () => {
-    const cartItems = JSON.parse(localStorage.getItem('cart')) || [];
-    const cartItemsList = document.querySelector('.cart-items');
-    const cartTotal = document.querySelector('.cart-total');
-    const clearCartButton = document.querySelector('.clear-cart');
-    const cartIcon = document.querySelector('.cart-icon');
-    const cartContainer = document.querySelector('.cart-container');
-    const cartCount = document.querySelector('.cart-count');
-    const overlay = document.createElement('div');
-    overlay.classList.add('overlay');
-    document.body.appendChild(overlay);
+document.addEventListener("DOMContentLoaded", function() {
+    const cartCount = document.querySelector(".cart-count");
+    const cartList = document.getElementById("cart-list");
+    const totalPriceElement = document.getElementById("total-price");
+    const checkoutBtn = document.getElementById("checkout-btn");
 
-    // Function to update cart UI
-    function updateCartUI() {
-        cartItemsList.innerHTML = '';
-        let total = 0;
+    let cartItems = JSON.parse(localStorage.getItem("cart")) || [];
+
+        // Remove item from cart
+        function removeItem(index) {
+            cartItems.splice(index, 1);
+            localStorage.setItem("cart", JSON.stringify(cartItems));
+            displayCart();
+        }
+    
+        // Event listener for remove button clicks
+        cartList.addEventListener("click", function(event) {
+            if (event.target.classList.contains("remove-btn")) {
+                const index = parseInt(event.target.dataset.index);
+                removeItem(index);
+            }
+        });
+
+    function updateCartCount() {
+        const totalCount = cartItems.length;
+        cartCount.textContent = totalCount;
+    }
+
+    function displayCart() {
+        cartList.innerHTML = "";
+        let totalPrice = 0;
+        cartItems.forEach((item, index) => {
+            const li = document.createElement("li");
+            li.textContent = `${item.name} - $${item.price}`;
+            const deleteBtn = document.createElement("button");
+            deleteBtn.textContent = "Delete";
+            deleteBtn.addEventListener("click", function() {
+                cartItems.splice(index, 1);
+                localStorage.setItem("cart", JSON.stringify(cartItems));
+                updateCart();
+            });
+            li.appendChild(deleteBtn);
+            cartList.appendChild(li);
+            totalPrice += item.price;
+        });
+        totalPriceElement.textContent = `$${totalPrice}`;
+    }
+
+    function updateCart() {
+        updateCartCount();
+        displayCart();
+    }
+
+    function updateCheckout() {
+        let totalPrice = 0;
         cartItems.forEach(item => {
-            const listItem = document.createElement('li');
-            listItem.textContent = `${item.name} - $${item.price}`;
-            cartItemsList.appendChild(listItem);
-            total += item.price;
+            totalPrice += item.price;
         });
-        cartTotal.textContent = total;
-        cartCount.textContent = cartItems.length;
-        localStorage.setItem('cart', JSON.stringify(cartItems));
+        totalPriceElement.textContent = `$${totalPrice}`;
     }
 
-    // Function to add item to cart
-    function addToCart(name, price) {
-        cartItems.push({ name, price });
-        updateCartUI();
-    }
-
-    // Add click event to all 'add-to-cart' buttons
-    document.querySelectorAll('.add-to-cart').forEach(button => {
-        button.addEventListener('click', (event) => {
-            const name = event.target.getAttribute('data-name');
-            const price = parseFloat(event.target.getAttribute('data-price'));
-            addToCart(name, price);
-        });
+    checkoutBtn.addEventListener("click", function() {
+        alert("Checkout functionality is not implemented yet.");
     });
 
-    // Clear cart
-    clearCartButton.addEventListener('click', () => {
-        cartItems.length = 0;
-        updateCartUI();
-    });
-
-    // Toggle cart visibility
-    cartIcon.addEventListener('click', () => {
-        cartContainer.classList.toggle('hidden');
-        overlay.style.display = cartContainer.classList.contains('hidden') ? 'none' : 'block';
-    });
-
-    // Close cart when clicking outside
-    overlay.addEventListener('click', () => {
-        cartContainer.classList.add('hidden');
-        overlay.style.display = 'none';
-    });
-
-    // Initialize cart UI
-    updateCartUI();
+    updateCart();
+    updateCheckout();
 });
-

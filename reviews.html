@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Reviews</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="starreview.css">
+    <link rel="icon" href="Photos/217920712de6a34d2da69740c822f52b.png" type="image/x-icon">
+    <link rel="apple-touch-icon" href="Photos/217920712de6a34d2da69740c822f52b.png">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <a href="index.html"><img src="Photos/217920712de6a34d2da69740c822f52b.png" alt="Logo" class="logo"></a>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="gallery.html">Art Gallery</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="pricing.html">Pricing</a></li>
+                    <li><a href="terms.html">ToS</a></li>
+                    <li><a href="reviews.html" class="current">Reviews</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container">
+        <h1>Customer Reviews</h1>
+        <div class="reviews-grid">
+            <!-- Add more review-boxes as needed -->
+            <div class="reviews-grid">
+                <div class="review-box">
+                    <img src="Photos/Trans_CJ_Sketch.png" alt="Provided Product" class="review-image" onclick="openOverlay(this.src)">
+                    <p><strong>Speed of Delivery:</strong>                         
+                        <div class="star-rating">
+                        <span class="star">&#9733;</span>
+                        <span class="star">&#9733;</span>
+                        <span class="star hollow">&#9734;</span>
+                        <span class="star hollow">&#9734;</span>
+                        <span class="star hollow">&#9734;</span>
+                    </p>
+                    <p><strong>Service:</strong>
+                        <div class="star-rating">
+                            <span class="star">&#9733;</span>
+                            <span class="star">&#9733;</span>
+                            <span class="star">&#9733;</span>
+                            <span class="star">&#9733;</span>
+                            <span class="star">&#9733;</span>
+                    </p>
+                    <p><strong>Quality:</strong>
+                        <div class="star-rating">
+                        <span class="star">&#9733;</span>
+                        <span class="star">&#9733;</span>
+                        <span class="star">&#9733;</span>
+                        <span class="star">&#9733;</span>
+                        <span class="star">&#9733;</span>
+                    </div>
+                </p>
+                <p><strong>Overall Experience:</strong>
+                    <div class="star-rating">
+                    <span class="star">&#9733;</span>
+                    <span class="star">&#9733;</span>
+                    <span class="star">&#9733;</span>
+                    <span class="star">&#9733;</span>
+                    <span class="star hollow">&#9734;</span>
+                </div>
+            </p>
+                    <p><strong>Comment:</strong> Took to long for delivery, how ever quility was good!</p>
+                    <p style="color: #666666;">Review made by CJ Ecplise. You can find them on <a href="https://www.twitch.tv/demonsuss211" style="color: #666666; text-decoration: none;">Twitch</a> and <a href="https://www.twitter.com/demonsuss211" style="color: #666666; text-decoration: none;">Twitter</a>.</p>
+                </div>
+        </div>
+    </div>
+    <div id="overlay" class="overlay">
+        <span class="close-btn" onclick="closeOverlay()">&times;</span>
+        <img id="overlay-img" class="overlay-img" src="" alt="Full Size Image">
+    </div>
+    <script src="rewviews.js"></script>
+</body>
+
+</html>

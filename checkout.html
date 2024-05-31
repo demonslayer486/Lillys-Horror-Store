@@ -3,15 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lilly's Horror Store - Pricing</title>
+    <title>Checkout - Lilly's Horror Store</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="store.css">
+    <link rel="stylesheet" href="checkout.css">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="icon" href="Photos/217920712de6a34d2da69740c822f52b.png" type="image/x-icon">
     <link rel="apple-touch-icon" href="Photos/217920712de6a34d2da69740c822f52b.png">
 </head>
 <body>
-    <!-- Header Section -->
     <header>
         <div class="header-container">
             <a href="index.html"><img src="Photos/217920712de6a34d2da69740c822f52b.png" alt="Logo" class="logo"></a>
@@ -20,7 +19,7 @@
                     <li><a href="index.html">Home</a></li>
                     <li><a href="gallery.html">Art Gallery</a></li>
                     <li><a href="contact.html">Contact</a></li>
-                    <li><a href="pricing.html" class="current">Pricing</a></li>
+                    <li><a href="pricing.html">Pricing</a></li>
                     <li><a href="terms.html">ToS</a></li>
                     <li><a href="reviews.html">Reviews</a></li>
                 </ul>
@@ -32,16 +31,13 @@
         </div>
     </header>
     
-    <!-- Sketch Art Section -->
-    <div class="flex justify-center items-center">
-        <div class="bg-white dark:bg-zinc-800 shadow-lg rounded-lg p-6 m-4 flex flex-col items-center">
-            <img alt="Basic" src="Photos/GLUJIxlWEAAMSBH.png" class="w-24 h-24 object-cover rounded-full">
-            <h2 class="text-lg font-semibold text-center mt-4">Sketch - Head</h2>
-            <p class="text-zinc-600 dark:text-zinc-400 text-center mt-2">I make you a sketch of your choosing!</p>
-            <p class="text-2xl font-semibold text-center mt-4">$10</p>
-            <button class="bg-zinc-300 dark:bg-zinc-700 text-zinc-700 dark:text-zinc-300 px-4 py-2 mt-4 rounded-lg choose-btn" data-name="Sketch - Head" data-price="10">Choose</button>
+    <div class="checkout-container">
+        <h2 class="text-2xl font-semibold mb-4">Checkout</h2>
+        <div id="cart-details" class="mb-4">
+            <!-- Cart items will be dynamically added here -->
         </div>
-        <!-- Add more item divs here -->
+        <p class="text-xl font-semibold mb-2">Total: <span id="total-price">$0</span></p>
+        <button id="checkout-btn" class="bg-zinc-300 dark:bg-zinc-700 text-zinc-700 dark:text-zinc-300 px-4 py-2 mt-4 rounded-lg">Checkout</button>
     </div>
 
     <!-- Cart Modal -->
@@ -51,25 +47,12 @@
             <ul id="cart-list" class="mb-4">
                 <!-- Cart items will be dynamically added here -->
             </ul>
-            <p>Total: <span id="total-price">$0</span></p>
+            <p>Total: <span id="modal-total-price">$0</span></p>
             <button class="bg-zinc-300 dark:bg-zinc-700 text-zinc-700 dark:text-zinc-300 px-4 py-2 mt-4 rounded-lg close">Close</button>
-            <button class="bg-zinc-300 dark:bg-zinc-700 text-zinc-700 dark:text-zinc-300 px-4 py-2 mt-4 rounded-lg checkout-btn">Checkout</button>
         </div>
     </div>
 
-    <!-- JavaScript Section -->
-    <script src="store.js"></script>
     <script src="cart.js"></script>
-    <script>
-        // JavaScript code for checkout functionality
-        document.addEventListener("DOMContentLoaded", function() {
-            const checkoutBtn = document.querySelector(".checkout-btn");
-
-            checkoutBtn.addEventListener("click", function() {
-                // Redirect to checkout page
-                window.location.href = "checkout.html";
-            });
-        });
-    </script>
+    <script src="checkout.js"></script>
 </body>
 </html>

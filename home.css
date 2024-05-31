@@ -1,0 +1,204 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    top: 0;
+    background-color: #333;
+    color: white;
+    padding: 10px 0;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+    z-index: 1000;
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Center horizontally */
+    padding: 0 20px;
+}
+
+
+.header-container nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.header-container nav ul li {
+    margin: 0 15px;
+}
+
+.header-container nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.header-container nav ul li a.current,
+.header-container nav ul li a:hover {
+    text-decoration: underline;
+}
+
+.logo {
+    height: 50px;
+}
+
+.slideshow-container {
+    position: relative;
+    max-width: 1000px;
+    margin: 20px auto;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+}
+
+.mySlides {
+    display: none;
+    animation: fadeEffect 1s;
+}
+
+.mySlides img {
+    width: 500px;
+    height: 500px;
+}
+
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+}
+
+.dots {
+    text-align: center;
+    padding: 10px 0;
+}
+
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+    background-color: #717171;
+}
+
+.content {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #f4f4f4;
+    border-radius: 10px;
+    margin: 20px;
+}
+
+.content h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #333;
+    animation: fadeIn 2s ease-in-out;
+}
+
+.content p {
+    font-size: 1.2em;
+    color: #666;
+    line-height: 1.6;
+    animation: fadeIn 3s ease-in-out;
+}
+
+@keyframes fadeEffect {
+    from {opacity: .4} 
+    to {opacity: 1}
+}
+
+@keyframes fadeIn {
+    from {opacity: 0} 
+    to {opacity: 1}
+}
+
+.blog-post {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px; /* Add some margin between blog posts */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+    transition: transform 0.3s ease; /* Add transition for hover effect */
+}
+
+.blog-post h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.blog-post .excerpt {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 15px;
+}
+
+.blog-post .date {
+    font-size: 0.9rem;
+    color: #999;
+    margin-bottom: 10px;
+    display: block;
+}
+
+.blog-post .read-more {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.blog-post:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transform: translateY(-2px);
+    transition: all 0.3s ease;
+    transform: translateY(-5px); /* Lift the blog post slightly on hover */
+}
+
+.blog-post:hover .read-more {
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    .blog-post {
+        padding: 15px;
+    }
+
+    .blog-post h3 {
+        font-size: 1.3rem;
+    }
+
+    .blog-post .excerpt {
+        font-size: 0.9rem;
+    }
+
+    .blog-post .date {
+        font-size: 0.8rem;
+    }
+}
